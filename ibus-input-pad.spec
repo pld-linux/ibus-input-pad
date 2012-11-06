@@ -1,7 +1,7 @@
 Summary:	Input Pad for IBus
 Name:		ibus-input-pad
 Version:	1.4.0
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://input-pad.googlecode.com/files/%{name}-%{version}.tar.gz
