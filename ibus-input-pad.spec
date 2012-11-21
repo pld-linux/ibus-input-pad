@@ -1,4 +1,5 @@
 Summary:	Input Pad for IBus
+Summary(pl.UTF-8):	Input Pad (ekranowa tablica wprowadzania znaków) dla IBusa
 Name:		ibus-input-pad
 Version:	1.4.0
 Release:	2
@@ -7,17 +8,26 @@ Group:		Libraries
 Source0:	http://input-pad.googlecode.com/files/%{name}-%{version}.tar.gz
 # Source0-md5:	bc25c9c8706e6840b26a5dd79fc6b14d
 URL:		http://code.google.com/p/input-pad/
-BuildRequires:	gtk+3-devel
-BuildRequires:	ibus-devel
+BuildRequires:	gettext-devel
+BuildRequires:	glib2-devel >= 1:2.8
+BuildRequires:	gtk+3-devel >= 3.0
+BuildRequires:	ibus-devel >= 1.4
 BuildRequires:	input-pad-devel
-BuildRequires:	libtool
-Requires:	ibus
+BuildRequires:	intltool >= 0.35.0
+BuildRequires:	pkgconfig
+Requires:	glib2 >= 1:2.8
+Requires:	gtk+3 >= 3.0
+Requires:	ibus >= 1.4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_libexecdir	%{_libdir}/ibus
 
 %description
 The input pad engine for IBus platform.
+
+%description -l pl.UTF-8
+Silnik Input Pad (ekranowa tablica wprowadzania znaków) dla platformy
+IBus.
 
 %prep
 %setup -q
@@ -40,7 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS README
+%doc AUTHORS ChangeLog README TODO
 %attr(755,root,root) %{_libexecdir}/ibus-engine-input-pad
 %attr(755,root,root) %{_libexecdir}/ibus-setup-input-pad
 %{_datadir}/ibus/component/input-pad.xml
