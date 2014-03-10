@@ -1,12 +1,13 @@
 Summary:	Input Pad for IBus
 Summary(pl.UTF-8):	Input Pad (ekranowa tablica wprowadzania znaków) dla IBusa
 Name:		ibus-input-pad
-Version:	1.4.1
+Version:	1.4.2
 Release:	1
 License:	GPL v2+
 Group:		Libraries
+#Source0Download: https://code.google.com/p/input-pad/downloads/list
 Source0:	http://input-pad.googlecode.com/files/%{name}-%{version}.tar.gz
-# Source0-md5:	7aa2da18c1be6ea9180669846ca9aefa
+# Source0-md5:	942e8b36eb0fb1208fd48c3ff3fbf3b4
 URL:		http://code.google.com/p/input-pad/
 BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.8
