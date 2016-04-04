@@ -5,10 +5,10 @@ Version:	1.4.2
 Release:	1
 License:	GPL v2+
 Group:		Libraries
-#Source0Download: https://code.google.com/p/input-pad/downloads/list
-Source0:	http://input-pad.googlecode.com/files/%{name}-%{version}.tar.gz
+#Source0Download: https://github.com/fujiwarat/ibus-input-pad/releases
+Source0:	https://github.com/fujiwarat/ibus-input-pad/releases/download/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	942e8b36eb0fb1208fd48c3ff3fbf3b4
-URL:		http://code.google.com/p/input-pad/
+URL:		https://github.com/fujiwarat/ibus-input-pad
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.8
 BuildRequires:	gtk+3-devel >= 3.0
